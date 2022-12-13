@@ -1,8 +1,9 @@
 #include <stdlib.h>
 #include <time.h>
 #include <stdio.h>
+/* more headers goes there */
 /**
-  *Main - Entry point
+  *main - Entry point
   *
   *
   *Return: Always 0 (success)
