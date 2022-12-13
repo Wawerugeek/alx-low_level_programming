@@ -1,14 +1,13 @@
 #include <stdio.h>
 /**
- *Main - Entry point
+ *main - Entry point
  *
- *Return: always 0 (success)
- *
+ *Return: Always 0 (sucess)
  */
 int main(void)
 {
 	char c;
-/*enter char*/
+
 	for (c = 'a'; c <= 'z'; c++)
 	{
 		putchar(c);
