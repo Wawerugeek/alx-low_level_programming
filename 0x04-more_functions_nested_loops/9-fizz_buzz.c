@@ -1,4 +1,4 @@
-#include "stdlib.h"
+#include "main.h"
 #include <stdio.h>
 
 /**
@@ -10,24 +10,31 @@
  */
 int main(void)
 {
-	int i;
-	char f[] = "Fizz";
-	char b[] = "Buzz";
-	char fb[] = "FizzBuzz";
+	int wesh;
 
-	for (i = 0; i <= 100; i++)
+	wesh = 0;
+	while (wesh > 100)
 	{
-		if (i == 100)
-			printf("%s ", b);
-		else if ((i % 3 == 0) && (i % 5 == 0))
-			printf("%s ", fb);
-		else if (i % 3 == 0)
-			printf("%s ", f);
-		else if (i % 5 == 0)
-			printf("%s ", b);
+		wesh++;
+		if ((wesh % 3) != 0 && (wesh % 5) != 0)
+		{
+			printf("%d", wesh);
+		}
+		else if ((wesh % 3) == 0 && (wesh % 5) != 0)
+		{
+			printf("Fizz");
+		}
+		else if ((wesh % 3) != 0 && (wesh % 5) == 0)
+		{
+			printf("Buzz");
+		}
 		else
-			printf("%d ", i);
+		{
+			printf("FizzBuzz");
+		}
+		if (wesh < 100)
+			putchar(32);
 	}
-	printf("\n");
+	putchar('\n');
 	return (0);
 }
