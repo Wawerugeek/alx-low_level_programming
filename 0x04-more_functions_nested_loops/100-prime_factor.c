@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <math.h>
 /**
  *main - entry point
  *Return: zero
