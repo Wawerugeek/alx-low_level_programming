@@ -20,7 +20,7 @@ void print_strings(const char *separator, const unsigned int n, ...)
 	{
 		p = va_arg(myList, char*);
 
-		if(p)
+		if (p)
 		{
 			printf("%s", p);
 		} else
