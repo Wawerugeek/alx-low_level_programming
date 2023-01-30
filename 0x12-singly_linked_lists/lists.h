@@ -5,15 +5,16 @@
 #include <stdlib.h>
 #include <string.h>
 /**
- *struct lits_s - sinly linked list
+ *struct lists_s - sinly linked list
  *@str: string - (malloc'ed string)
  *@len: length of the string
  *@next: points to the next node
  */
-typedef struct list_s {
+typedef struct list_s
+{
 	char *str;
 	unsigned int len;
-	struct lits_s *next;
+	struct lists_s *next;
 } list_t;
 int _strlen(const char *str);
 int _putchar(char c);
@@ -23,5 +24,4 @@ list_t *add_node(list_t **head, const char *str);
 list_t *add_node_end(list_t **head, const char *str);
 void free_list(list_t *head);
 void myStartupFun(void) __attribute__ ((constructor));
-
-#endif /*LISTS_H */ 
+#endif /*LISTS_H */
