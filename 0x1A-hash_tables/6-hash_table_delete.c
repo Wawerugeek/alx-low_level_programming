@@ -18,8 +18,6 @@ void hash_table_delete(hash_table_t *ht)
 				node1 = ht->array[x]->next;
 				free(ht->array[x]->key);
 				free(ht->array[x]->value);
-				ht->array[x] = NULL;
-				ht->array[x]->value = NULL;
 				free(ht->array[x]);
 				ht->array[x] = node1;
 			}
