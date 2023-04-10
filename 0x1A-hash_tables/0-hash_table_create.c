@@ -10,16 +10,16 @@ hash_table_t *hash_table_create(unsigned long int size)
 	hash_table_t *table1;
 	unsigned long int x;
 
-	if size == 0
-		return (NULL)
-
 	table1 = malloc(sizeof(hash_table_t));
 	if (!table1)
 		return (NULL);
 	table1->size = size;
 	table1->array = malloc(sizeof(hash_node_t *) * size);
 	if (table1->array == NULL)
+	{
+		free(table1);
 		return (NULL);
+	}
 	for (x = 0; x < size; x++)
 		table1->array[x] = NULL;
 	return (table1);
