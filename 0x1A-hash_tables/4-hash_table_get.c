@@ -1,9 +1,9 @@
 #include "hash_tables.h"
 /**
- * hash_table_get - gives the key corresponding value
+ *hash_table_get - gives the key corresponding value
  * @ht:  hash table
  * @key: key associated
- * Return the value associated with the element
+ *Return:  the value associated with the element
  */
 char *hash_table_get(const hash_table_t *ht, const char *key)
 {
