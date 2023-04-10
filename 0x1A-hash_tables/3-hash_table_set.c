@@ -1,9 +1,9 @@
 #include "hash_tables.h"
 /**
- * hash_table_Set - set the value of hash table
+ * hash_table_set - set the value of hash table
  * @ht: desgniated hash table
- * key: the indexed key
- * value: the value to be set
+ * @key: the indexed key
+ * @value: the value to be set
  * Return: 1 on success else 0
  */
 int hash_table_set(hash_table_t *ht, const char *key, const char *value)
@@ -12,7 +12,7 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 	char *set_value;
 	unsigned long int index, x;
 
-	if(!ht || !key || !value)
+	if (!ht || !key || !value)
 		return (0);
 	set_value = strdup(value);
 	if (set_value == NULL)
@@ -32,6 +32,12 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 	{
 		free(set_value);
 		return (1);
+	}
+	node1->key = strdup(key);
+	if (node1->key == NULL)
+	{
+		free(node1);
+		return (0);
 	}
 	node1->value = set_value;
 	node1->next = ht->array[index];
